@@ -88,6 +88,8 @@ const obj1 = {
   
     // return `INSERT INTO ${tableName} (${columns}) VALUES (${values});`
     
+
+
   
     
   
