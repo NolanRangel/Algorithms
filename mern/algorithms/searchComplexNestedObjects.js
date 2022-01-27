@@ -34,6 +34,7 @@ const expected2 = ["John Smith", "Arya Stark"];
 const badHabit3 = "different naming for variables";
 const expected3 = [];
 
+
 function santasNaughtyList(persons, badHabit) {
     let results = [];
     for (const obj of persons) {
@@ -50,9 +51,9 @@ function santasNaughtyList(persons, badHabit) {
     return results;
 }
 
-// console.log(santasNaughtyList(students, badHabit1));
-// console.log(santasNaughtyList(students, badHabit2));
-// console.log(santasNaughtyList(students, badHabit3));
+console.log(santasNaughtyList(students, badHabit1));
+console.log(santasNaughtyList(students, badHabit2));
+console.log(santasNaughtyList(students, badHabit3));
 
 function santasNaughtyListFunctional(persons, badHabit) {
     let results = [];
@@ -67,6 +68,9 @@ function santasNaughtyListFunctional(persons, badHabit) {
     }
     return results;
 }
+
+
+
 
 console.log(santasNaughtyListFunctional(students, badHabit1));
 console.log(santasNaughtyListFunctional(students, badHabit2));
