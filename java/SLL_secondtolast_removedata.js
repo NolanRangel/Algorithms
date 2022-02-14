@@ -75,6 +75,9 @@ class SLL {
             runner2 = runner1;
             runner1 = runner1.next;
             if (runner1 && runner1.data === data) {
+                // if the runner1 is the same as the data
+                // runner2 bumps to the next position and then gets set as the data of the index
+                // thats in front of runner1...
                 runner2.next = runner1.next;
                 break;
             }
