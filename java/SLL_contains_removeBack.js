@@ -48,8 +48,8 @@ class SLL {
             //console.log(data);
 
             if (runner.data === data)
-                return true;
-            runner = runner.next;
+                runner = runner.next;
+            return true;
         }
         return false;
     }
