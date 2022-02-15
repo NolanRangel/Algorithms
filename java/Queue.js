@@ -1,3 +1,6 @@
+// https://habr.com/en/post/493474/
+
+
 class Node {
     constructor(data) {
         this.data = data;
