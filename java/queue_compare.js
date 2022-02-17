@@ -1,10 +1,10 @@
-class SlStack {
+class SLLStack {
     constructor() {
         this.top = null;
     }
     // add to top
     push(data) {
-
+        let newNode = new Node(data);
         if (this.top === null) {
             this.top = newNode;
         } else {
@@ -73,7 +73,7 @@ class SLLQueue {
     isPalindrome() {
         //Determine if the queue is a palindrome (same items forward and backwards)
         // Use only 1 stack as additional storage, no other arrays or objects
-        let tempStack = new SlStack();
+        let tempStack = new SLLStack();
         let tempQ1 = new SLLQueue();
         let result = true;
         while (!this.isEmpty()) {
