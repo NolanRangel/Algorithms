@@ -27,7 +27,7 @@ class BinarySearchTree {
             return null;
         }
 
-        while (current.left !== null) {
+        while (current.left) {
             current = current.left;
 
         }
@@ -129,31 +129,31 @@ threeLevelTree.root.right.right = new Node(20);
 threeLevelTree.print();
 
 //  isEmpty, min, minRecursive, max, maxRecursive
-
+console.log('*******isEmpty*******');
 console.log(emptyTree.isEmpty());
 console.log(oneNodeTree.isEmpty());
 console.log(twoLevelTree.isEmpty());
 console.log(threeLevelTree.isEmpty());
-console.log('**************');
 
+console.log('******min********');
 console.log(emptyTree.min());
 console.log(oneNodeTree.min());
 console.log(twoLevelTree.min());
 console.log(threeLevelTree.min());
-console.log('**************');
 
+console.log('*******minRecursive*******');
 console.log(emptyTree.minRecursive());
 console.log(oneNodeTree.minRecursive());
 console.log(twoLevelTree.minRecursive());
 console.log(threeLevelTree.minRecursive());
-console.log('**************');
 
+console.log('******max********');
 console.log(emptyTree.max());
 console.log(oneNodeTree.max());
 console.log(twoLevelTree.max());
 console.log(threeLevelTree.max());
-console.log('**************');
 
+console.log('******maxRecursive********');
 console.log(emptyTree.maxRecursive());
 console.log(oneNodeTree.maxRecursive());
 console.log(twoLevelTree.maxRecursive());
