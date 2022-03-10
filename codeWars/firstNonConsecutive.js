@@ -20,12 +20,12 @@ function firstNonConsecutive(arr) {
     // Establish a variable to collect the non consecutive integer
     let first;
     for (let i = 1; i < arr.length; i++) {
-        // If prev value is not equal to the next element array val
         if (arr.length === 0 || arr.length === 1) {
             return null2
         }
+        // If prev value is not equal to the next element array val
         if ((previous + 1) !== arr[i]) {
-            // You've found your first non consecutive and break
+            // found your first non consecutive and break
             first = arr[i];
             break;
         }
