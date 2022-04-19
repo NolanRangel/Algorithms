@@ -3,9 +3,6 @@
 // 
 
 
-
-
-
 const riverLevels1 = [15, 17, 30];
 const expected1 = 15; // 30 - 15 = 15
 
@@ -35,50 +32,50 @@ const expected7 = -1;
 
 function measureWaterLevels(waterLevels) {
     //Find the largest rise in water levels during a day
-        let maxDiff = -1;
-        let min = waterLevels[0];
-        for (let i = 0; i < waterLevels.length; i++){
-            if(waterLevels[i] > min && maxDiff < waterLevels[i]-min){
-                maxDiff = waterLevels[i] - min;
-            }
-            if(waterLevels[i]<min){
-                min = waterLevels[i];
-            }
+    let maxDiff = -1;
+    let min = waterLevels[0];
+    for (let i = 0; i < waterLevels.length; i++) {
+        if (waterLevels[i] > min && maxDiff < waterLevels[i] - min) {
+            maxDiff = waterLevels[i] - min;
         }
-        return maxDiff
+        if (waterLevels[i] < min) {
+            min = waterLevels[i];
+        }
     }
-    console.log(measureWaterLevels(riverLevels1));
-    console.log(measureWaterLevels(riverLevels2));
-    console.log(measureWaterLevels(riverLevels3));
-    console.log(measureWaterLevels(riverLevels4));
-    console.log(measureWaterLevels(riverLevels5));
-    console.log(measureWaterLevels(riverLevels6));
-    console.log(measureWaterLevels(riverLevels7));
+    return maxDiff
+}
+console.log(measureWaterLevels(riverLevels1));
+console.log(measureWaterLevels(riverLevels2));
+console.log(measureWaterLevels(riverLevels3));
+console.log(measureWaterLevels(riverLevels4));
+console.log(measureWaterLevels(riverLevels5));
+console.log(measureWaterLevels(riverLevels6));
+console.log(measureWaterLevels(riverLevels7));
 
 
-    function measureWaterLevels(waterLevels) {
-        let maxRise=0;
-        let i = 0;
-        while(i<waterLevels.length){
-            let currentRise=0;
-            while(waterLevels[i+1]<waterLevels[i]){
-                i++;
-            }
-            while(waterLevels[i+1]>waterLevels[i]){
-                currentRise += waterLevels[i+1]-waterLevels[i];
-                i++;
-            }
-            currentRise > maxRise && (maxRise=currentRise);
+function measureWaterLevels(waterLevels) {
+    let maxRise = 0;
+    let i = 0;
+    while (i < waterLevels.length) {
+        let currentRise = 0;
+        while (waterLevels[i + 1] < waterLevels[i]) {
             i++;
         }
-        return maxRise>0 ? maxRise : -1
+        while (waterLevels[i + 1] > waterLevels[i]) {
+            currentRise += waterLevels[i + 1] - waterLevels[i];
+            i++;
+        }
+        currentRise > maxRise && (maxRise = currentRise);
+        i++;
     }
+    return maxRise > 0 ? maxRise : -1
+}
 
 
-    console.log(measureWaterLevels(riverLevels1));
-    console.log(measureWaterLevels(riverLevels2));
-    console.log(measureWaterLevels(riverLevels3));
-    console.log(measureWaterLevels(riverLevels4));
-    console.log(measureWaterLevels(riverLevels5));
-    console.log(measureWaterLevels(riverLevels6));
-    console.log(measureWaterLevels(riverLevels7));
+console.log(measureWaterLevels(riverLevels1));
+console.log(measureWaterLevels(riverLevels2));
+console.log(measureWaterLevels(riverLevels3));
+console.log(measureWaterLevels(riverLevels4));
+console.log(measureWaterLevels(riverLevels5));
+console.log(measureWaterLevels(riverLevels6));
+console.log(measureWaterLevels(riverLevels7));
