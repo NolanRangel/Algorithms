@@ -3,20 +3,20 @@
 
 
 
-// const nums1 = [2, 11, 7, 15];
-// const targetSum1 = 9;
-// // Order doesn't matter. Explanation: nums[0] + nums[2] = 2 + 7 = 9
-// const expected1 = [0, 2];
-// //nums[0] + nums[2] === targetSum1
+const nums1 = [2, 11, 7, 15];
+const targetSum1 = 9;
+// Order doesn't matter. Explanation: nums[0] + nums[2] = 2 + 7 = 9
+const expected1 = [0, 2];
+//nums[0] + nums[2] === targetSum1
 
 
-// const nums2 = [10, 3, 2, 5, 4, -1];
-// const targetSum2 = 6;
-// const expected2 = [2, 4];
+const nums2 = [10, 3, 2, 5, 4, -1];
+const targetSum2 = 6;
+const expected2 = [2, 4];
 
-// const nums3 = [3, 8, 4, 1, 9, -2, 0, 6];
-// const targetSum3 = 6;
-// const expected3 = [1, 5];
+const nums3 = [3, 8, 4, 1, 9, -2, 0, 6];
+const targetSum3 = 6;
+const expected3 = [1, 5];
 
 
 
@@ -24,23 +24,23 @@
 // // Sample interview question for Google : https://www.youtube.com/watch?v=XKu_SEDAykw
 
 
-// function twoSum(nums, targetSum) {
-//     //given an unsorted array and a target sum
-//     // find out the possible combination that can add up to the target sum
-//     let expected = [];
-//     for (let i = 0; i < nums.length; i++) {
-//         for (let j = i + 1; j < nums.length; j++) {
-//             if (nums[i] + nums[j] === targetSum) {
-//                 expected.push([i, j]);
-//             }
-//         }
-//     }
-//     return expected
-// }
+function twoSum(nums, targetSum) {
+    //given an unsorted array and a target sum
+    // find out the possible combination that can add up to the target sum
+    let expected = [];
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === targetSum) {
+                expected.push([i, j]);
+            }
+        }
+    }
+    return expected
+}
 
-// console.log(twoSum(nums1, targetSum1));
-// console.log(twoSum(nums2, targetSum2));
-// console.log(twoSum(nums3, targetSum3));
+console.log(twoSum(nums1, targetSum1));
+console.log(twoSum(nums2, targetSum2));
+console.log(twoSum(nums3, targetSum3));
 
 
 
@@ -95,7 +95,7 @@ function kMostFrequent(nums, k) {
             maxKey = key;
             console.log(value);
         }
-        if(expected.length <= k && maxValue === value){
+        if (expected.length <= k && maxValue === value) {
             expected.push(parseInt(key));
             // delete freqTable[maxKey];
         }
