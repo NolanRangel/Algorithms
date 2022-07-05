@@ -40,13 +40,11 @@ class SLL {
     // check if the SLL includes the given data
     // return a boolean
     contains(data) {
-
         let runner = this.head;
         // console.log(runner);
         while (runner !== null) {
             //console.log(runner);
             //console.log(data);
-
             if (runner.data === data)
                 runner = runner.next;
             return true;

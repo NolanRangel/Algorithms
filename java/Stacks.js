@@ -15,10 +15,7 @@ class Node {
       this.length = 0;
     }
   
-    isEmpty(){
-      //check if the stack is empty
-      //return a boolean 
-
+    isEmpty(){ 
       if(this.top === null){
           return true;
       } else{
@@ -29,7 +26,6 @@ class Node {
     push(data){
       //create a node from the data
       // add the new node to the stack (the top)
-      
     const newNode = new Node(data);
     newNode.next = this.top;
     this.top = newNode;

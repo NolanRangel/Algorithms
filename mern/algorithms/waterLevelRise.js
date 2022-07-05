@@ -34,6 +34,7 @@ function measureWaterLevels(waterLevels) {
     for (let i = 0; i < waterLevels.length; i++) {
         if (waterLevels[i] > min && maxDiff < waterLevels[i] - min) {
             maxDiff = waterLevels[i] - min;
+<<<<<<< HEAD
         }
         if (waterLevels[i] < min) {
             min = waterLevels[i];
@@ -42,6 +43,14 @@ function measureWaterLevels(waterLevels) {
     return maxDiff
 }
 
+=======
+        }
+        if (waterLevels[i] < min) {
+            min = waterLevels[i];
+        }
+    }
+    return maxDiff
+}
 console.log(measureWaterLevels(riverLevels1));
 console.log(measureWaterLevels(riverLevels2));
 console.log(measureWaterLevels(riverLevels3));
@@ -49,6 +58,36 @@ console.log(measureWaterLevels(riverLevels4));
 console.log(measureWaterLevels(riverLevels5));
 console.log(measureWaterLevels(riverLevels6));
 console.log(measureWaterLevels(riverLevels7));
+
+
+function measureWaterLevels(waterLevels) {
+    let maxRise = 0;
+    let i = 0;
+    while (i < waterLevels.length) {
+        let currentRise = 0;
+        while (waterLevels[i + 1] < waterLevels[i]) {
+            i++;
+        }
+        while (waterLevels[i + 1] > waterLevels[i]) {
+            currentRise += waterLevels[i + 1] - waterLevels[i];
+            i++;
+        }
+        currentRise > maxRise && (maxRise = currentRise);
+        i++;
+    }
+    return maxRise > 0 ? maxRise : -1
+}
+
+
+>>>>>>> a73fb0c55ad07f9baa00eaa2c181f0dc6177c06e
+console.log(measureWaterLevels(riverLevels1));
+console.log(measureWaterLevels(riverLevels2));
+console.log(measureWaterLevels(riverLevels3));
+console.log(measureWaterLevels(riverLevels4));
+console.log(measureWaterLevels(riverLevels5));
+console.log(measureWaterLevels(riverLevels6));
+console.log(measureWaterLevels(riverLevels7));
+<<<<<<< HEAD
 
 
     // O(n^2)
@@ -78,3 +117,5 @@ console.log(measureWaterLevels(riverLevels7));
     // console.log(measureWaterLevels(riverLevels5));
     // console.log(measureWaterLevels(riverLevels6));
     // console.log(measureWaterLevels(riverLevels7));
+=======
+>>>>>>> a73fb0c55ad07f9baa00eaa2c181f0dc6177c06e
