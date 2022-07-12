@@ -12,6 +12,7 @@ function divisibleSumPairs(n, k, ar) {
         console.log(r, '!!!!!');
         res += map[r ? k - r : 0] || 0;
         console.log(map[r ? k - r : 0] || 0, '****');
+        console.log(res, '$$$$');
         console.log(k - r, '|||||');
         map[r] = map[r] ? map[r] + 1 : 1;
         console.log(map);
@@ -20,6 +21,8 @@ function divisibleSumPairs(n, k, ar) {
     return res
 
 }
+
+
 
 
 
