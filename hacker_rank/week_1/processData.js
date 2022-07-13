@@ -111,3 +111,4 @@ processData("C;C;coffee machine")   // CoffeeMachine
 processData("S;C;LargeSoftwareBook") // large software book
 processData("C;M;white sheet of paper") // whiteSheetOfPaper()
 processData("S;V;pictureFrame")     // picture frame
+processData("C;M;mouse pad")     // picture frame
