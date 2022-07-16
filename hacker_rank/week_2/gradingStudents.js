@@ -6,10 +6,9 @@ function gradingStudents(grades) {
     let gradeBook = [];
 
     for (let g of grades) {
-        console.log(g % 5);
         if (g < 38) {
             gradeBook.push(g);
-        } else if ((g % 5) >= 3 || g === 38 || g === 39) {
+        } else if (g >= 38 && (g % 5) >= 3) {
             gradeBook.push(Math.ceil(g / 5) * 5);
         } else {
             gradeBook.push(g)
