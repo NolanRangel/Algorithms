@@ -3,8 +3,7 @@
 
 function flippingBits(n) {
 
-    let bits = (2 ** 32 - 1) - n;
-
+    let bits = (2 ** 32 - 1) - n
 
     return bits
 
