@@ -29,15 +29,22 @@
 
 
 function findMedian(arr) {
-    let sorted = arr.sort()
+    let length = arr.length;
 
-    for (let a of sorted) {
-        if (a === Math.floor(sorted.length / 2)) {
-            return a
-        } else if (a === Math.floor((sorted.length / 2)) * -1) {
-            return a * -1
+    for (let i = 0; i < parseInt(length); i++) {
+        for (let j = 0; j < parseInt(length); j++) {
+            if (parseInt(arr[i]) < parseInt(arr[j])) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
+
     }
+
+    let result = Math.ceil(parseInt(length - 1) / 2);
+    return arr[result];
+
 }
 
 
